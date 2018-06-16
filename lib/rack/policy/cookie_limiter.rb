@@ -53,7 +53,7 @@ module Rack
         if ( request.cookies.has_key?(consent_token.to_s) )
           @env['rack-policy.consent'] = 'true'
         else
-          @env.delete(HTTP_COOKIE) if @env[HTTP_COOKIE]
+          # @env.delete(HTTP_COOKIE) if @env[HTTP_COOKIE]
           @env['rack-policy.consent'] = nil
         end
       end
